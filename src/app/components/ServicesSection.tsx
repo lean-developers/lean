@@ -171,7 +171,7 @@ const ServicesSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {services.map((service, index) => {
+          {services.map((service) => {
             const Icon = service.icon;
             return (
               <motion.div
@@ -223,7 +223,7 @@ const ServicesSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {additionalServices.map((service, index) => {
+          {additionalServices.map((service) => {
             const Icon = service.icon;
             return (
               <motion.div
@@ -260,7 +260,7 @@ const ServicesSection = () => {
               Ready to Start Your Project?
             </h3>
             <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6">
-              Let's discuss your requirements and create a solution that perfectly fits your
+              Let&apos;s discuss your requirements and create a solution that perfectly fits your
               business needs.
             </p>
             <motion.button

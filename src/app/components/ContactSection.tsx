@@ -141,14 +141,14 @@ const ContactSection = () => {
           </motion.div>
 
           <h2 className="text-3xl sm:text-4xl lg:text-6xl font-bold mb-4 sm:mb-6">
-            <span className="text-white">Let's Start</span>
+            <span className="text-white">Let&apos;s Start</span>
             <br />
             <span className="gradient-text">Your Project</span>
           </h2>
 
           <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto">
-            Ready to bring your ideas to life? Contact us today for a free consultation and let's
-            discuss how we can help your business grow.
+            Ready to bring your ideas to life? Contact us today for a free consultation and
+            let&apos;s discuss how we can help your business grow.
           </p>
         </motion.div>
 
@@ -219,7 +219,7 @@ const ContactSection = () => {
                 Follow Us
               </h3>
               <div className="flex gap-3 sm:gap-4">
-                {socialLinks.map((social, index) => {
+                {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
                     <motion.a

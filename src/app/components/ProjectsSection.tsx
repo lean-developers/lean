@@ -180,7 +180,7 @@ const ProjectsSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {projects.map((project, index) => {
+          {projects.map((project) => {
             const Icon = project.icon;
             return (
               <motion.div
@@ -293,7 +293,7 @@ const ProjectsSection = () => {
               Have a Project in Mind?
             </h3>
             <p className="text-sm sm:text-base text-text-secondary mb-4 sm:mb-6">
-              Let's work together to bring your vision to life with cutting-edge technology and
+              Let&apos;s work together to bring your vision to life with cutting-edge technology and
               innovative solutions.
             </p>
             <motion.button

@@ -149,7 +149,7 @@ const TeamSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {stats.map((stat, index) => (
+          {stats.map((stat) => (
             <motion.div
               key={stat.label}
               variants={itemVariants}
@@ -172,7 +172,7 @@ const TeamSection = () => {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {teamMembers.map((member, index) => {
+          {teamMembers.map((member) => {
             const Icon = member.icon;
             return (
               <motion.div

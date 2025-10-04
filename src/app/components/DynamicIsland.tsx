@@ -63,7 +63,7 @@ const DynamicIsland = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [navItems]);
 
   return (
     <motion.div

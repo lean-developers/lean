@@ -82,7 +82,7 @@ const Footer = () => {
               </p>
 
               <div className="flex gap-2 sm:gap-3">
-                {socialLinks.map((social, index) => {
+                {socialLinks.map((social) => {
                   const Icon = social.icon;
                   return (
                     <motion.a

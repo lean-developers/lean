@@ -1,31 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Home, Code, Smartphone, Users, Mail } from "lucide-react";
 import Image from "next/image";
+
+// Move navItems outside component to prevent recreation on every render
+const navItems = [
+  { id: "home", label: "Home", icon: Home },
+  { id: "services", label: "Services", icon: Code },
+  { id: "projects", label: "Projects", icon: Smartphone },
+  { id: "team", label: "Team", icon: Users },
+  { id: "contact", label: "Contact", icon: Mail },
+];
 
 const DynamicIsland = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
   const [isMobile, setIsMobile] = useState(false);
 
-  const navItems = [
-    { id: "home", label: "Home", icon: Home },
-    { id: "services", label: "Services", icon: Code },
-    { id: "projects", label: "Projects", icon: Smartphone },
-    { id: "team", label: "Team", icon: Users },
-    { id: "contact", label: "Contact", icon: Mail },
-  ];
-
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = useCallback((sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setActiveSection(sectionId);
     }
     setIsExpanded(false);
-  };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +64,7 @@ const DynamicIsland = () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, [navItems]);
+  }, []);
 
   return (
     <motion.div
